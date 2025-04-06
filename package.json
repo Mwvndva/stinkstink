@@ -1,0 +1,31 @@
+{
+  "name": "mental-health-bot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@vitalets/google-translate-api": "^9.2.1",
+    "axios": "^1.8.4",
+    "compromise": "^14.14.4",
+    "dotenv": "^16.4.7",
+    "libretranslate": "^1.0.1",
+    "node-cron": "^3.0.3",
+    "node-schedule": "^2.1.1",
+    "pg": "^8.14.1",
+    "qrcode-terminal": "^0.12.0",
+    "redis": "^4.7.0",
+    "sentiment": "^5.0.2",
+    "whatsapp-web.js": "^1.27.0",
+    "winston": "^3.17.0"
+  },
+  "devDependencies": {
+    "@flydotio/dockerfile": "^0.7.10"
+  }
+}
