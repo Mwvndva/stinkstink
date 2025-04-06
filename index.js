@@ -9,6 +9,19 @@ const { scheduleJob } = require('node-schedule');
 const Sentiment = require('sentiment');
 const winston = require('winston');
 const qrcode = require('qrcode-terminal');
+const express = require('express');
+const app = express();
+
+
+
+app.get("/", (req, res) => {
+  res.send("Stink Bot is alive! 💨");
+});
+
+const PORT = process.env.PORT || 3000;
+app.listen(PORT, () => {
+  console.log(`🌐 Web server running on port ${PORT}`);
+});
 
 // ======================
 // 2. CONFIGURATION
