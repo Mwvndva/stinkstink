@@ -53,13 +53,11 @@ const logger = winston.createLogger({
 
 console.log("🔧 Initializing database connection...");
 const db = new Pool({
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASSWORD,
-  database: process.env.DB_NAME,
-  port: process.env.DB_PORT
+  connectionString: process.env.DATABASE_URL,
+  ssl: {
+    rejectUnauthorized: false, // Needed for Railway's Postgres SSL setup
+  },
 });
-
 // Test DB connection immediately
 db.query('SELECT NOW()')
   .then(res => logger.info('🗄️ Database connected at:', res.rows[0].now))
